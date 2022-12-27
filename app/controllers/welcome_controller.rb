@@ -1,4 +1,4 @@
-class WelcomController < ApplicationController
+class WelcomeController < ApplicationController
   skip_before_action :authenticate
 
   def index
