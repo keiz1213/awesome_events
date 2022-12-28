@@ -5,7 +5,7 @@ FactoryBot.define do
     sequence(:place) { |i| "イベント開催場所#{i}"}
     sequence(:content) { |i| "イベント本文#{i}"}
     start_at { 1.days.from_now }
-    end_at { 1.days.from_now + rand(1..30).hours }
+    end_at { 1.days.from_now + 5.day }
 
     trait :invalid do
       name { nil }
