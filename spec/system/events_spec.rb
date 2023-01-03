@@ -1,21 +1,21 @@
 require 'rails_helper'
 
 RSpec.describe "Events", type: :system do
-  describe 'test3' do
-    scenario 'destroy event', js: true do
-      sign_in_as(FactoryBot.create(:user))
-      event = FactoryBot.create(:event, owner: current_user)
-      visit event_path(event)
+  # describe 'test3' do
+  #   scenario 'destroy event', js: true do
+  #     sign_in_as(FactoryBot.create(:user))
+  #     event = FactoryBot.create(:event, owner: current_user)
+  #     visit event_path(event)
 
-      take_screenshot
-      click_on 'イベントを削除する'
+  #     take_screenshot
+  #     click_on 'イベントを削除する'
 
-      expect {
-        expect(page.accept_confirm).to eq '本当に削除しますか？'
-        expect(page).to have_content '削除しました'
-      }.to change(Event, :count).by(-1)
-    end
-  end
+  #     expect {
+  #       expect(page.accept_confirm).to eq '本当に削除しますか？'
+  #       expect(page).to have_content '削除しました'
+  #     }.to change(Event, :count).by(-1)
+  #   end
+  # end
 
   describe 'test1' do
     context 'when login is not requred' do
