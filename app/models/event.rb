@@ -12,7 +12,7 @@ class Event < ApplicationRecord
   validates :image,
     content_type: [:png, :jpg, :jpeg], 
     size: { less_than_or_equal_to: 10.megabytes },
-    dimension: { width: { max: 2000 } }, height: { max: 2000 }
+    dimension: { width: { max: 2000 }, height: { max: 2000 } }
   validate :start_at_should_be_before_end_at
 
   def created_by?(user)
