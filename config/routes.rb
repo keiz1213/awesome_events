@@ -8,4 +8,5 @@ Rails.application.routes.draw do
     resources :tickets
   end
   get 'status' => 'status#index', defaults: { format: 'json' }
+  match "*path" => 'application#error404', via: :all
 end
