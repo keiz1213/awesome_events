@@ -1,9 +1,5 @@
 %h1 イベント一覧
-- User.all.each do |user|
-  = user.id
-  = user.uid
-  = user.name
-  = user.image_url
+
 %ul.list-group
   - @events.each do |event|
     = link_to(event, class: "list-group-item list-group-item-action") do

@@ -32,6 +32,8 @@ module AwesomeEvents
         helper_specs: false,
         routing_specs: false
     end
+
+    config.active_storage.variant_prosessor = :vips
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files
